@@ -13,7 +13,7 @@ const {message: breeds} = dataValues;
     <div>
        <ul>
         <pre> {{ breeds }}</pre>
-        <li v-for="breed in breeds">{{ breed }}</li>
+        <li v-for="breed in breeds" :key="breed.id">{{ breed }}</li>
       </ul>
     </div>
   </Main>
