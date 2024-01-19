@@ -1,10 +1,11 @@
 <script setup>
 // Fetch the data from a server route
 
-const { data: employees } = await useFetch("/api/employees", {
+const { data } = await useFetch("/api/employees", {
   headers: useRequestHeaders(["cookie"]),
 });
-const newEmployees = employees[0];
+const employees = data._value.employees;
+console.log(employees) 
 </script>
 
 <template>
